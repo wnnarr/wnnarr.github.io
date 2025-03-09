@@ -10,11 +10,27 @@
 		<h1>Formulário HTML</h1>
 
 		<form action="forms.html" method="GET">
+			<fieldset>
+				<legend>Formulário de Contato</legend>
 
 			Nome.: <input type="text" id="nome" name="nome" /><br />
 			Senha.: <input type="password" id="senha" name="senha" /><br />
 
-			Sexo.: <input type="radio" id="sexo" name="sexo" value="masculino" />Homem <input type="radio" id="sexo" name="sexo" value="feminino"/>Feminino<br />
+			<style>
+
+				fieldset{
+					border:1px solid #ccc;
+				}
+				fieldset legend{
+					color:#333;
+				}
+
+			</style>
+
+			<fieldset>
+				<legend>Gender</legend>
+				Sexo.: <input type="radio" id="sexo" name="sexo" value="masculino" />Homem <input type="radio" id="sexo" name="sexo" value="feminino"/>Feminino<br />
+			</fieldset>
 
 			Conhecimentos:
 			<input type="checkbox" value="html" name="skills" />HTML
@@ -25,14 +41,21 @@
 			País: 
 			<select>
 				<option value="1">Brasil</option>	
-				<option value="2">Alemanha</option>	
-				<option value="3">Japão</option>	
-				<option value="4">China</option>	
-				<option value="5">Australia</option>	
-				<option value="6">New Zeland</option>	
+				<option value="2">Alemanha</option>
+				<optgroup label="Asia">	
+					<option value="3">Japão</option>	
+					<option value="4">China</option>
+				</optgroup>	
+				<optgroup label="Oceanian">
+					<option value="5">Australia</option>	
+					<option value="6">New Zeland</option>
+				</optgroup>	
 			</select><br />
 
-			Envie um Arquivo: <input type="file" name="arquivo" />
+			Envie um Arquivo: <input type="file" name="arquivo" /><br />
+
+			Resumo:<br/>
+			<textarea name="texto" rows="5" cols="50"></textarea><br />
 
 			<div>
 
@@ -42,7 +65,7 @@
 
 			</div>
 
-
+		</fieldset>
 		</form>
 
 	</body>
